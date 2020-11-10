@@ -3,9 +3,6 @@ class User < ApplicationRecord
 
     private
     def subscribe_control
-        if self.subscribe
-            FormWorker.perform_async(self.email)
-        end
-    
+        FormWorker.perform_async(self.name, self.email, self.phone, self.subscribe)
     end
 end

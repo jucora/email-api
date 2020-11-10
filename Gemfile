@@ -14,6 +14,7 @@ gem 'rack-cors'
 gem "sidekiq"
 gem 'sidekiq-cron'
 gem 'redis'
+gem 'gibbon', :git => 'https://github.com/amro/gibbon.git'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
