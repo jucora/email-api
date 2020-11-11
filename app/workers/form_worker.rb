@@ -6,16 +6,14 @@ class FormWorker
     if subscribe === true
       sendStatus = "opted-in"
     end
-    p sendStatus
-    
-    @list_id = "3553536a69"
+    @list_id = "2a65827e13"
     gibbon = Gibbon::Request.new
     gibbon.lists(@list_id).members.create(
       body: {
         email_address: email,
         status: "subscribed",
         merge_fields: {
-          FNAME: name,
+          NAME: name,
           PHONE: phone,
           SEND_INFO: sendStatus,
         }
