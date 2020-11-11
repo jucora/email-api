@@ -1,0 +1,2 @@
+CREATE USER julian;
+ALTER USER julian WITH SUPERUSER;

@@ -1,9 +1,8 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.7.1'
+ruby '2.5.5'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.4'
-gem 'pg'
 gem 'puma', '~> 4.1'
 gem 'sass-rails', '>= 6'
 gem 'webpacker', '~> 4.0'
@@ -32,5 +31,10 @@ group :test do
   gem 'selenium-webdriver'
   gem 'webdrivers'
 end
+
+group :production do
+  gem 'pg'
+end
+
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

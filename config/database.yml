@@ -1,18 +1,19 @@
 default: &default
   adapter: postgresql
   encoding: unicode
+  database: <%= ENV['DATABASE_NAME'] %>
+  username: <%= ENV['DATABASE_USER'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  port: <%= ENV['DATABASE_PORT'] || '5432' %>
+  host: <%= ENV['DATABASE_HOST'] %>
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
 
 development:
   <<: *default
-  database: email_api_development
 
 test:
   <<: *default
-  database: email_api_test
 
 production:
   <<: *default
-  database: email
-  username: <%= ENV['EMAIL_DATABASE_USERNAME'] %>
-  password: <%= ENV['EMAIL_DATABASE_PASSWORD'] %>
