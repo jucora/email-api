@@ -9,7 +9,7 @@ class UsersController < ApplicationController
         else
             render json:{
                 status: false,
-                errors: newUser    .errors.full_messages
+                errors: newUser.errors.full_messages
             }
         end
     end
