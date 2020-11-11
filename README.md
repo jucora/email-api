@@ -48,7 +48,7 @@ Note: you can select another port if you wish. Just keep in mind that it has to 
 
 2. You should see a similar output like the next one:
 
-![](images/create_services.png)
+![](images/create_services.jpg)
 
 3. You can also check the current processes by running the next command:
 
@@ -56,7 +56,7 @@ Note: you can select another port if you wish. Just keep in mind that it has to 
 
     And you should see something similar to this:
 
-![](images/services.png)
+![](images/services.jpg)
 
 4. You can run the next command to make sure all containers are running:
 
@@ -64,7 +64,7 @@ Note: you can select another port if you wish. Just keep in mind that it has to 
 
 5. You should see a similar output like the next one:
 
-![](images/containers.png)
+![](images/containers.jpg)
 
     Note: make sure that each container states is UP.
 
